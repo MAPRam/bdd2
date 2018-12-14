@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Actualizar</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="js/functions.js"></script>
+
+    </head>
+    <body style="background-color: rgb(235,235,235);">
+        <div class="pos-f-t">
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" onclick="location.href = '../'">
+        <img src="images/OMS.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        SALUD MUNDIAL
+      </a>
+        <!-- Muestra menú -->
+        <ul class="nav nav-tabs">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Salud mundial</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="http://www.who.int/country-cooperation/es/">Reportes de la OMS</a>
+      <a class="dropdown-item" href="http://www.who.int/about/regions/es/">Paises que conforman la OMS</a>
+      <a class="dropdown-item" href="https://www.who.int/about/es/">Qué es la OMS</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Estad&iacute;sticas</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" onclick="location.href = '../privacidad/'" >Información sobre los datos</a>
+          <a class="dropdown-item" onclick="location.href = ''">Consultar informaci&oacute;n</a>
+          <a class="dropdown-item" onclick="location.href = '../descargar/'">Descargar datos</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Modificar datos</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" onclick="location.href = ''">Actualizar</a>
+            <a class="dropdown-item" onclick="location.href = '../insertar/'">Insertar</a>
+            <a class="dropdown-item" onclick="location.href ='../eliminar/'">Eliminar</a>
+          </div>
+        </li>
+
+      <li class="nav-item">
+        <a class="nav-link " onclick="location.href = '../about/'">¿Quienes somos?</a>
+      </li>
+    </ul>
+    </nav>
+    </div>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Actualizar</li>
+        </ol>
+      </nav>
+
+    <div class="container py-5">
+      <div class="row col-md-8 py-4 px-5">
+        <label>En este apartado podr&aacute; modificar s&iacute;ntomas o caracter&iacute;sticas de alguna enfermedad</label>              
+      </div>
+
+          <div class="row justify-content-center bg-light py-5">
+              <div class="col-6">
+                <label>Nombre de enfermedad:</label>
+                <input type="text" placeholder="Busca por nombre">
+              </div>
+
+          </div>
+          <div class="row justify-content-center bg-light">
+              <div class="col-6">
+                <label>Clave de la enfermedad:</label>
+                <input type="text" placeholder="Busca por clave">
+              </div>
+
+          </div>
+          <div class="row justify-content-end bg-light py-3">
+              <div class="col-6">
+                  <button class="btn btn-danger">Borrar</button>
+                  <button class="btn btn-primary">Buscar</button>
+                </div>
+          </div>
+
+        </div>
+
+       <div class="container py-5 bg-light">
+          <div class="row justify-content-around">
+              <div class="col-4" style="border: 2px solid gray">
+               <center>
+                  <p class="h4 lead" id="nombre">Enfermedad 1</p>
+                  <p id="clave">13PQ90</p>
+               </center>
+                <hr>
+                <p class="h1 lead"> <strong>Descripci&oacute;n:</strong> </p>
+                <p class="lead" id="descripcion">Este es el demo de la descripci&oacute;n de la enfermedad uno</p>
+                <p class="h1 lead"> <strong>S&iacute;ntoma:</strong> </p>
+                <p class="lead">Esta enfermedad genera los siguientes s&iacute;ntomas</p>
+                <p class="lead" id="sintoma">
+                  S&iacute;ntoma 1 <br>
+                  S&iacute;ntoma 2 <br>
+                  S&iacute;ntoma 3 <br>
+                  S&iacute;ntoma 4 <br>
+                </p>
+               <hr>
+               <div >
+                  <button class="btn btn-warning" onclick="tratamiento();">Actualizar informaci&oacute;n</button>
+               </div>
+               <hr> 
+                
+              </div>
+              
+            </div>
+       </div>
+
+
+    <footer class="pt-0 my-5 pt-md-5 border-top">
+        <div class="row px-5 py-5">
+          <div class="col-md-3">
+            <img class="mb-2" src="images/OMS.png" alt="" width="24" height="24">
+            <small class="d-block mb-3 text-muted">© 2018-2019</small>
+          </div>
+          <div class="col-md-3">
+            <h5>Acerca de</h5>
+            <ul class="list-unstyled text-small" style="font-size:12px;">
+              <li><a class="text-muted" href="#">¿Quienes somos?</a></li>
+              <li><a class="text-muted" href="#">Integrantes</a></li>
+              <li><a class="text-muted" href="#">Localizacion de los datos</a></li>
+              <li><a class="text-muted" href="#">Privacidad</a></li>
+              <li><a class="text-muted" href="#">Terminos</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Fuentes</h5>
+            <ul class="list-unstyled text-small" style="font-size:12px;">
+              <li><a class="text-muted" href="#">Fuente de datos</a></li>
+              <li><a class="text-muted" href="#">P&aacute;ginas consultadas</a></li>
+              <li><a class="text-muted" href="#">Herramientas utilizadas</a></li>
+              <li><a class="text-muted" href="#">Sistemas operativos y gestores de DB usados</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>Producto</h5>
+            <ul class="list-unstyled text-small" style="font-size:12px;">
+              <li><a class="text-muted" href="#">Mapa de sitio</a></li>
+            </ul>
+          </div>
+
+
+        </div>
+      </footer>
+
+
+        <script src="app.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+</html>
